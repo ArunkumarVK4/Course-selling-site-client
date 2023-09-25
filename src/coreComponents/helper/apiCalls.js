@@ -15,7 +15,7 @@ export const getCourseDetails = (courseId) => {
   return http
     .get(`api/user/course/${courseId}`)
     .then((response) => {
-      return response?.data?.course;
+      return response?.data?.courses;
     })
     .catch((err) => {
       throw err?.response?.data?.error;
