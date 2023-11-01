@@ -10,6 +10,9 @@ export default function CourseCards(props) {
     image =
       'https://media.istockphoto.com/id/1366428092/photo/webinar-e-learning-skills-business-internet-technology-concepts-training-webinar-e-learning.webp?b=1&s=170667a&w=0&k=20&c=qjK4h0qt4W_NNG8TmboGw8RDRv8TNzEoFM_JEDZ1Ah0=';
   }
+  if(!name){
+    name="react JS"
+  }
   const handleViewDetails = () => {
     if (isAdmin()) {
       navigate(`/admin/course/${_id}`);

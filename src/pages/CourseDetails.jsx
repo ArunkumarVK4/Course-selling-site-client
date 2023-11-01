@@ -19,6 +19,8 @@ function CourseDetails() {
     getCourseDetails(id)
       .then((res) => {
         setCourseDetail(res);
+        console.log(res)
+
       })
       .catch((err) => console.log(err));
   }, [id]);

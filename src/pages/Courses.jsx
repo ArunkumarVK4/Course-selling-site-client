@@ -20,6 +20,7 @@ function Course() {
         setLoading(false);
       });
   }, []);
+  console.log(courses)
 
   return (
     <>
@@ -28,8 +29,8 @@ function Course() {
         <Loader number={4} />
       ) : courses.length > 0 ? (
         <div className='grid grid-cols-4 gap-8 py-8 px-12'>
-          {courses.map((course) => {
-            return <CourseCards course={course} />;
+          {courses.map((course, i) => {
+            return <CourseCards course={course} key={i}/>;
           })}
         </div>
       ) : (
